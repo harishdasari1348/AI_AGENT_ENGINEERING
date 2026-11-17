@@ -21,8 +21,10 @@ jupyter notebook ai_industry_applications.ipynb
 
 ## Run the tests
 
-Verify the companion notebook runs end-to-end without errors:
-
 ```bash
-python -m pytest
+cd ../..
+pip install -r requirements-test.txt
+python -m pytest -k 10-applications-of-ai-in-real-world-industries
 ```
+
+`examples/tests/test_notebooks.py` runs every example notebook from top to bottom and fails if any cell raises an error (including the notebook's own `assert` quick checks). `-k` runs only this example; leave it off to run them all.
