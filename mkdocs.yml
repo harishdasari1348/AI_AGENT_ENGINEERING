@@ -1,0 +1,896 @@
+site_name: AI Agent Engineering Academy
+site_description: Learn Python, LangChain, LangGraph, RAG and AI Agent Engineering.
+site_author: AI Agent Engineering Academy
+# Set this to your GitHub Pages address once it is live, for example:
+# site_url: https://YOUR-USERNAME.github.io/AI-AGENT-ENGINEERING-ACADEMY/
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: en
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+# Navigation is generated from the roadmap. Every new page must be added here.
+nav:
+  - Home: index.md
+  - Learning Roadmap: roadmap.md
+  - "AI Fundamentals":
+      - 01-AI-FUNDAMENTALS/README.md
+      - "Module 1.1: Introduction to Artificial Intelligence":
+          - 01-AI-FUNDAMENTALS/01-introduction-to-artificial-intelligence/README.md
+          - "What is Artificial Intelligence?": 01-AI-FUNDAMENTALS/01-introduction-to-artificial-intelligence/01-what-is-artificial-intelligence.md
+          - "History of Artificial Intelligence": 01-AI-FUNDAMENTALS/01-introduction-to-artificial-intelligence/02-history-of-artificial-intelligence.md
+          - "Types of AI": 01-AI-FUNDAMENTALS/01-introduction-to-artificial-intelligence/03-types-of-ai.md
+          - "Narrow AI vs General AI": 01-AI-FUNDAMENTALS/01-introduction-to-artificial-intelligence/04-narrow-ai-vs-general-ai.md
+          - "Machine Learning vs Deep Learning": 01-AI-FUNDAMENTALS/01-introduction-to-artificial-intelligence/05-machine-learning-vs-deep-learning.md
+          - "Supervised Learning": 01-AI-FUNDAMENTALS/01-introduction-to-artificial-intelligence/06-supervised-learning.md
+          - "Unsupervised Learning": 01-AI-FUNDAMENTALS/01-introduction-to-artificial-intelligence/07-unsupervised-learning.md
+          - "Reinforcement Learning": 01-AI-FUNDAMENTALS/01-introduction-to-artificial-intelligence/08-reinforcement-learning.md
+          - "Generative AI": 01-AI-FUNDAMENTALS/01-introduction-to-artificial-intelligence/09-generative-ai.md
+          - "Applications of AI in real-world industries": 01-AI-FUNDAMENTALS/01-introduction-to-artificial-intelligence/10-applications-of-ai-in-real-world-industries.md
+      - "Module 1.2: Understanding Large Language Models":
+          - 01-AI-FUNDAMENTALS/02-understanding-large-language-models/README.md
+          - "What is an LLM?": 01-AI-FUNDAMENTALS/02-understanding-large-language-models/01-what-is-an-llm.md
+          - "How do LLMs work?": 01-AI-FUNDAMENTALS/02-understanding-large-language-models/02-how-do-llms-work.md
+          - "Training vs inference": 01-AI-FUNDAMENTALS/02-understanding-large-language-models/03-training-vs-inference.md
+          - "Pre-training and fine-tuning": 01-AI-FUNDAMENTALS/02-understanding-large-language-models/04-pre-training-and-fine-tuning.md
+          - "Foundation models": 01-AI-FUNDAMENTALS/02-understanding-large-language-models/05-foundation-models.md
+          - "Open-source vs proprietary models": 01-AI-FUNDAMENTALS/02-understanding-large-language-models/06-open-source-vs-proprietary-models.md
+          - "Model parameters": 01-AI-FUNDAMENTALS/02-understanding-large-language-models/07-model-parameters.md
+          - "Context windows": 01-AI-FUNDAMENTALS/02-understanding-large-language-models/08-context-windows.md
+          - "Temperature and sampling": 01-AI-FUNDAMENTALS/02-understanding-large-language-models/09-temperature-and-sampling.md
+          - "Hallucinations and limitations": 01-AI-FUNDAMENTALS/02-understanding-large-language-models/10-hallucinations-and-limitations.md
+      - "Module 1.3: Tokens and Tokenization":
+          - 01-AI-FUNDAMENTALS/03-tokens-and-tokenization/README.md
+          - "What is a token?": 01-AI-FUNDAMENTALS/03-tokens-and-tokenization/01-what-is-a-token.md
+          - "How tokenization works": 01-AI-FUNDAMENTALS/03-tokens-and-tokenization/02-how-tokenization-works.md
+          - "Word-based vs subword tokenization": 01-AI-FUNDAMENTALS/03-tokens-and-tokenization/03-word-based-vs-subword-tokenization.md
+          - "Tokenizers": 01-AI-FUNDAMENTALS/03-tokens-and-tokenization/04-tokenizers.md
+          - "Token counting": 01-AI-FUNDAMENTALS/03-tokens-and-tokenization/05-token-counting.md
+          - "Context length": 01-AI-FUNDAMENTALS/03-tokens-and-tokenization/06-context-length.md
+          - "Token limits": 01-AI-FUNDAMENTALS/03-tokens-and-tokenization/07-token-limits.md
+          - "Token usage and API costs": 01-AI-FUNDAMENTALS/03-tokens-and-tokenization/08-token-usage-and-api-costs.md
+      - "Module 1.4: Embeddings":
+          - 01-AI-FUNDAMENTALS/04-embeddings/README.md
+          - "What are embeddings?": 01-AI-FUNDAMENTALS/04-embeddings/01-what-are-embeddings.md
+          - "Text embeddings": 01-AI-FUNDAMENTALS/04-embeddings/02-text-embeddings.md
+          - "Vector representations": 01-AI-FUNDAMENTALS/04-embeddings/03-vector-representations.md
+          - "Semantic similarity": 01-AI-FUNDAMENTALS/04-embeddings/04-semantic-similarity.md
+          - "Cosine similarity": 01-AI-FUNDAMENTALS/04-embeddings/05-cosine-similarity.md
+          - "Embedding models": 01-AI-FUNDAMENTALS/04-embeddings/06-embedding-models.md
+          - "Embedding dimensions": 01-AI-FUNDAMENTALS/04-embeddings/07-embedding-dimensions.md
+          - "Practical embedding implementation": 01-AI-FUNDAMENTALS/04-embeddings/08-practical-embedding-implementation.md
+      - "Module 1.5: Transformer Architecture":
+          - 01-AI-FUNDAMENTALS/05-transformer-architecture/README.md
+          - "What is a Transformer?": 01-AI-FUNDAMENTALS/05-transformer-architecture/01-what-is-a-transformer.md
+          - "Encoder and decoder": 01-AI-FUNDAMENTALS/05-transformer-architecture/02-encoder-and-decoder.md
+          - "Self-attention": 01-AI-FUNDAMENTALS/05-transformer-architecture/03-self-attention.md
+          - "Multi-head attention": 01-AI-FUNDAMENTALS/05-transformer-architecture/04-multi-head-attention.md
+          - "Positional encoding": 01-AI-FUNDAMENTALS/05-transformer-architecture/05-positional-encoding.md
+          - "Feed-forward networks": 01-AI-FUNDAMENTALS/05-transformer-architecture/06-feed-forward-networks.md
+          - "Layer normalization": 01-AI-FUNDAMENTALS/05-transformer-architecture/07-layer-normalization.md
+          - "Residual connections": 01-AI-FUNDAMENTALS/05-transformer-architecture/08-residual-connections.md
+          - "Transformer inference": 01-AI-FUNDAMENTALS/05-transformer-architecture/09-transformer-inference.md
+          - "How modern LLMs use Transformers": 01-AI-FUNDAMENTALS/05-transformer-architecture/10-how-modern-llms-use-transformers.md
+      - "Module 1.6: Prompt Engineering":
+          - 01-AI-FUNDAMENTALS/06-prompt-engineering/README.md
+          - "What is prompt engineering?": 01-AI-FUNDAMENTALS/06-prompt-engineering/01-what-is-prompt-engineering.md
+          - "System prompts": 01-AI-FUNDAMENTALS/06-prompt-engineering/02-system-prompts.md
+          - "User prompts": 01-AI-FUNDAMENTALS/06-prompt-engineering/03-user-prompts.md
+          - "Role-based prompting": 01-AI-FUNDAMENTALS/06-prompt-engineering/04-role-based-prompting.md
+          - "Few-shot prompting": 01-AI-FUNDAMENTALS/06-prompt-engineering/05-few-shot-prompting.md
+          - "Zero-shot prompting": 01-AI-FUNDAMENTALS/06-prompt-engineering/06-zero-shot-prompting.md
+          - "Chain-of-thought concepts": 01-AI-FUNDAMENTALS/06-prompt-engineering/07-chain-of-thought-concepts.md
+          - "Structured prompting": 01-AI-FUNDAMENTALS/06-prompt-engineering/08-structured-prompting.md
+          - "Prompt templates": 01-AI-FUNDAMENTALS/06-prompt-engineering/09-prompt-templates.md
+          - "Prompt injection and defensive prompting": 01-AI-FUNDAMENTALS/06-prompt-engineering/10-prompt-injection-and-defensive-prompting.md
+          - "Prompt evaluation": 01-AI-FUNDAMENTALS/06-prompt-engineering/11-prompt-evaluation.md
+          - "Prompt optimization": 01-AI-FUNDAMENTALS/06-prompt-engineering/12-prompt-optimization.md
+      - "Practical Projects":
+          - "Build a basic LLM chatbot": 01-AI-FUNDAMENTALS/projects/01-build-a-basic-llm-chatbot.md
+          - "Compare responses from different models": 01-AI-FUNDAMENTALS/projects/02-compare-responses-from-different-models.md
+          - "Create a prompt library": 01-AI-FUNDAMENTALS/projects/03-create-a-prompt-library.md
+          - "Build a structured information extraction application": 01-AI-FUNDAMENTALS/projects/04-build-a-structured-information-extraction-application.md
+  - "Python":
+      - 02-PYTHON-FOR-AI/README.md
+      - "Module 2.1: Python Fundamentals":
+          - 02-PYTHON-FOR-AI/01-python-fundamentals/README.md
+          - "Installing Python": 02-PYTHON-FOR-AI/01-python-fundamentals/01-installing-python.md
+          - "Python interpreter": 02-PYTHON-FOR-AI/01-python-fundamentals/02-python-interpreter.md
+          - "Variables and data types": 02-PYTHON-FOR-AI/01-python-fundamentals/03-variables-and-data-types.md
+          - "Strings and numbers": 02-PYTHON-FOR-AI/01-python-fundamentals/04-strings-and-numbers.md
+          - "Lists and tuples": 02-PYTHON-FOR-AI/01-python-fundamentals/05-lists-and-tuples.md
+          - "Dictionaries and sets": 02-PYTHON-FOR-AI/01-python-fundamentals/06-dictionaries-and-sets.md
+          - "Conditional statements": 02-PYTHON-FOR-AI/01-python-fundamentals/07-conditional-statements.md
+          - "Loops": 02-PYTHON-FOR-AI/01-python-fundamentals/08-loops.md
+          - "Functions": 02-PYTHON-FOR-AI/01-python-fundamentals/09-functions.md
+          - "Lambda functions": 02-PYTHON-FOR-AI/01-python-fundamentals/10-lambda-functions.md
+          - "List comprehensions": 02-PYTHON-FOR-AI/01-python-fundamentals/11-list-comprehensions.md
+          - "Exception handling": 02-PYTHON-FOR-AI/01-python-fundamentals/12-exception-handling.md
+          - "File handling": 02-PYTHON-FOR-AI/01-python-fundamentals/13-file-handling.md
+          - "JSON processing": 02-PYTHON-FOR-AI/01-python-fundamentals/14-json-processing.md
+      - "Module 2.2: Advanced Python":
+          - 02-PYTHON-FOR-AI/02-advanced-python/README.md
+          - "Object-oriented programming": 02-PYTHON-FOR-AI/02-advanced-python/01-object-oriented-programming.md
+          - "Classes and objects": 02-PYTHON-FOR-AI/02-advanced-python/02-classes-and-objects.md
+          - "Inheritance": 02-PYTHON-FOR-AI/02-advanced-python/03-inheritance.md
+          - "Polymorphism": 02-PYTHON-FOR-AI/02-advanced-python/04-polymorphism.md
+          - "Encapsulation": 02-PYTHON-FOR-AI/02-advanced-python/05-encapsulation.md
+          - "Abstraction": 02-PYTHON-FOR-AI/02-advanced-python/06-abstraction.md
+          - "Decorators": 02-PYTHON-FOR-AI/02-advanced-python/07-decorators.md
+          - "Closures": 02-PYTHON-FOR-AI/02-advanced-python/08-closures.md
+          - "Generators": 02-PYTHON-FOR-AI/02-advanced-python/09-generators.md
+          - "Iterators": 02-PYTHON-FOR-AI/02-advanced-python/10-iterators.md
+          - "Context managers": 02-PYTHON-FOR-AI/02-advanced-python/11-context-managers.md
+          - "Mutable vs immutable objects": 02-PYTHON-FOR-AI/02-advanced-python/12-mutable-vs-immutable-objects.md
+          - "Scope and namespaces": 02-PYTHON-FOR-AI/02-advanced-python/13-scope-and-namespaces.md
+          - "Type hints": 02-PYTHON-FOR-AI/02-advanced-python/14-type-hints.md
+          - "Dataclasses": 02-PYTHON-FOR-AI/02-advanced-python/15-dataclasses.md
+          - "Pydantic": 02-PYTHON-FOR-AI/02-advanced-python/16-pydantic.md
+      - "Module 2.3: Asynchronous Python":
+          - 02-PYTHON-FOR-AI/03-asynchronous-python/README.md
+          - "Synchronous vs asynchronous execution": 02-PYTHON-FOR-AI/03-asynchronous-python/01-synchronous-vs-asynchronous-execution.md
+          - "Concurrency": 02-PYTHON-FOR-AI/03-asynchronous-python/02-concurrency.md
+          - "Parallelism": 02-PYTHON-FOR-AI/03-asynchronous-python/03-parallelism.md
+          - "Threads and processes": 02-PYTHON-FOR-AI/03-asynchronous-python/04-threads-and-processes.md
+          - "async and await": 02-PYTHON-FOR-AI/03-asynchronous-python/05-async-and-await.md
+          - "Event loops": 02-PYTHON-FOR-AI/03-asynchronous-python/06-event-loops.md
+          - "asyncio": 02-PYTHON-FOR-AI/03-asynchronous-python/07-asyncio.md
+          - "Async API calls": 02-PYTHON-FOR-AI/03-asynchronous-python/08-async-api-calls.md
+          - "Concurrent LLM requests": 02-PYTHON-FOR-AI/03-asynchronous-python/09-concurrent-llm-requests.md
+          - "Error handling in asynchronous applications": 02-PYTHON-FOR-AI/03-asynchronous-python/10-error-handling-in-asynchronous-applications.md
+      - "Module 2.4: Python Development Environment":
+          - 02-PYTHON-FOR-AI/04-python-development-environment/README.md
+          - "Installing Python": 02-PYTHON-FOR-AI/04-python-development-environment/01-installing-python.md
+          - "Installing VS Code": 02-PYTHON-FOR-AI/04-python-development-environment/02-installing-vs-code.md
+          - "Python virtual environments": 02-PYTHON-FOR-AI/04-python-development-environment/03-python-virtual-environments.md
+          - "pip and package management": 02-PYTHON-FOR-AI/04-python-development-environment/04-pip-and-package-management.md
+          - "requirements.txt": 02-PYTHON-FOR-AI/04-python-development-environment/05-requirements-txt.md
+          - "pyproject.toml": 02-PYTHON-FOR-AI/04-python-development-environment/06-pyproject-toml.md
+          - "Environment variables": 02-PYTHON-FOR-AI/04-python-development-environment/07-environment-variables.md
+          - ".env files": 02-PYTHON-FOR-AI/04-python-development-environment/08-env-files.md
+          - "Logging": 02-PYTHON-FOR-AI/04-python-development-environment/09-logging.md
+          - "Debugging": 02-PYTHON-FOR-AI/04-python-development-environment/10-debugging.md
+          - "Git fundamentals": 02-PYTHON-FOR-AI/04-python-development-environment/11-git-fundamentals.md
+          - "GitHub repositories": 02-PYTHON-FOR-AI/04-python-development-environment/12-github-repositories.md
+      - "Module 2.5: APIs and Backend Development":
+          - 02-PYTHON-FOR-AI/05-apis-and-backend-development/README.md
+          - "What is an API?": 02-PYTHON-FOR-AI/05-apis-and-backend-development/01-what-is-an-api.md
+          - "HTTP fundamentals": 02-PYTHON-FOR-AI/05-apis-and-backend-development/02-http-fundamentals.md
+          - "REST APIs": 02-PYTHON-FOR-AI/05-apis-and-backend-development/03-rest-apis.md
+          - "HTTP methods": 02-PYTHON-FOR-AI/05-apis-and-backend-development/04-http-methods.md
+          - "Status codes": 02-PYTHON-FOR-AI/05-apis-and-backend-development/05-status-codes.md
+          - "Authentication": 02-PYTHON-FOR-AI/05-apis-and-backend-development/06-authentication.md
+          - "API keys": 02-PYTHON-FOR-AI/05-apis-and-backend-development/07-api-keys.md
+          - "Requests library": 02-PYTHON-FOR-AI/05-apis-and-backend-development/08-requests-library.md
+          - "FastAPI introduction": 02-PYTHON-FOR-AI/05-apis-and-backend-development/09-fastapi-introduction.md
+          - "Pydantic request validation": 02-PYTHON-FOR-AI/05-apis-and-backend-development/10-pydantic-request-validation.md
+          - "Response models": 02-PYTHON-FOR-AI/05-apis-and-backend-development/11-response-models.md
+          - "Streaming APIs": 02-PYTHON-FOR-AI/05-apis-and-backend-development/12-streaming-apis.md
+      - "Practical Projects":
+          - "Python REST API": 02-PYTHON-FOR-AI/projects/01-python-rest-api.md
+          - "Asynchronous API client": 02-PYTHON-FOR-AI/projects/02-asynchronous-api-client.md
+          - "Environment configuration manager": 02-PYTHON-FOR-AI/projects/03-environment-configuration-manager.md
+          - "FastAPI-based LLM endpoint": 02-PYTHON-FOR-AI/projects/04-fastapi-based-llm-endpoint.md
+  - "LangChain":
+      - 03-LANGCHAIN/README.md
+      - "Module 3.1: Introduction to LangChain":
+          - 03-LANGCHAIN/01-introduction-to-langchain/README.md
+          - "What is LangChain?": 03-LANGCHAIN/01-introduction-to-langchain/01-what-is-langchain.md
+          - "Why do we need LangChain?": 03-LANGCHAIN/01-introduction-to-langchain/02-why-do-we-need-langchain.md
+          - "LangChain architecture": 03-LANGCHAIN/01-introduction-to-langchain/03-langchain-architecture.md
+          - "LangChain ecosystem": 03-LANGCHAIN/01-introduction-to-langchain/04-langchain-ecosystem.md
+          - "LangChain vs direct model APIs": 03-LANGCHAIN/01-introduction-to-langchain/05-langchain-vs-direct-model-apis.md
+          - "LangChain vs LangGraph": 03-LANGCHAIN/01-introduction-to-langchain/06-langchain-vs-langgraph.md
+          - "LangChain package ecosystem": 03-LANGCHAIN/01-introduction-to-langchain/07-langchain-package-ecosystem.md
+          - "LangChain v1 architecture": 03-LANGCHAIN/01-introduction-to-langchain/08-langchain-v1-architecture.md
+      - "Module 3.2: Installation and Setup":
+          - 03-LANGCHAIN/02-installation-and-setup/README.md
+          - "Python environment setup": 03-LANGCHAIN/02-installation-and-setup/01-python-environment-setup.md
+          - "Installing LangChain": 03-LANGCHAIN/02-installation-and-setup/02-installing-langchain.md
+          - "Installing model provider integrations": 03-LANGCHAIN/02-installation-and-setup/03-installing-model-provider-integrations.md
+          - "Configuring API keys": 03-LANGCHAIN/02-installation-and-setup/04-configuring-api-keys.md
+          - "Environment management": 03-LANGCHAIN/02-installation-and-setup/05-environment-management.md
+          - "Creating a project structure": 03-LANGCHAIN/02-installation-and-setup/06-creating-a-project-structure.md
+          - "Running the first application": 03-LANGCHAIN/02-installation-and-setup/07-running-the-first-application.md
+      - "Module 3.3: Models and Messages":
+          - 03-LANGCHAIN/03-models-and-messages/README.md
+          - "What is a chat model?": 03-LANGCHAIN/03-models-and-messages/01-what-is-a-chat-model.md
+          - "Chat model integrations": 03-LANGCHAIN/03-models-and-messages/02-chat-model-integrations.md
+          - "Model initialization": 03-LANGCHAIN/03-models-and-messages/03-model-initialization.md
+          - "System messages": 03-LANGCHAIN/03-models-and-messages/04-system-messages.md
+          - "Human messages": 03-LANGCHAIN/03-models-and-messages/05-human-messages.md
+          - "AI messages": 03-LANGCHAIN/03-models-and-messages/06-ai-messages.md
+          - "Tool messages": 03-LANGCHAIN/03-models-and-messages/07-tool-messages.md
+          - "Model parameters": 03-LANGCHAIN/03-models-and-messages/08-model-parameters.md
+          - "Streaming responses": 03-LANGCHAIN/03-models-and-messages/09-streaming-responses.md
+          - "Model selection": 03-LANGCHAIN/03-models-and-messages/10-model-selection.md
+      - "Module 3.4: Prompt Engineering with LangChain":
+          - 03-LANGCHAIN/04-prompt-engineering-with-langchain/README.md
+          - "Prompt templates": 03-LANGCHAIN/04-prompt-engineering-with-langchain/01-prompt-templates.md
+          - "Chat prompt templates": 03-LANGCHAIN/04-prompt-engineering-with-langchain/02-chat-prompt-templates.md
+          - "Dynamic prompts": 03-LANGCHAIN/04-prompt-engineering-with-langchain/03-dynamic-prompts.md
+          - "Few-shot prompts": 03-LANGCHAIN/04-prompt-engineering-with-langchain/04-few-shot-prompts.md
+          - "Message placeholders": 03-LANGCHAIN/04-prompt-engineering-with-langchain/05-message-placeholders.md
+          - "Reusable prompts": 03-LANGCHAIN/04-prompt-engineering-with-langchain/06-reusable-prompts.md
+          - "Prompt configuration": 03-LANGCHAIN/04-prompt-engineering-with-langchain/07-prompt-configuration.md
+          - "Prompt testing": 03-LANGCHAIN/04-prompt-engineering-with-langchain/08-prompt-testing.md
+      - "Module 3.5: Structured Output":
+          - 03-LANGCHAIN/05-structured-output/README.md
+          - "What is structured output?": 03-LANGCHAIN/05-structured-output/01-what-is-structured-output.md
+          - "JSON output": 03-LANGCHAIN/05-structured-output/02-json-output.md
+          - "Pydantic schemas": 03-LANGCHAIN/05-structured-output/03-pydantic-schemas.md
+          - "Typed responses": 03-LANGCHAIN/05-structured-output/04-typed-responses.md
+          - "Schema validation": 03-LANGCHAIN/05-structured-output/05-schema-validation.md
+          - "Structured model responses": 03-LANGCHAIN/05-structured-output/06-structured-model-responses.md
+          - "Handling invalid outputs": 03-LANGCHAIN/05-structured-output/07-handling-invalid-outputs.md
+      - "Module 3.6: Tools and Tool Calling":
+          - 03-LANGCHAIN/06-tools-and-tool-calling/README.md
+          - "What are tools?": 03-LANGCHAIN/06-tools-and-tool-calling/01-what-are-tools.md
+          - "Why agents need tools": 03-LANGCHAIN/06-tools-and-tool-calling/02-why-agents-need-tools.md
+          - "Creating custom tools": 03-LANGCHAIN/06-tools-and-tool-calling/03-creating-custom-tools.md
+          - "Tool descriptions": 03-LANGCHAIN/06-tools-and-tool-calling/04-tool-descriptions.md
+          - "Tool arguments": 03-LANGCHAIN/06-tools-and-tool-calling/05-tool-arguments.md
+          - "Tool schemas": 03-LANGCHAIN/06-tools-and-tool-calling/06-tool-schemas.md
+          - "Tool execution": 03-LANGCHAIN/06-tools-and-tool-calling/07-tool-execution.md
+          - "Tool error handling": 03-LANGCHAIN/06-tools-and-tool-calling/08-tool-error-handling.md
+          - "Multiple tools": 03-LANGCHAIN/06-tools-and-tool-calling/09-multiple-tools.md
+          - "External API integration": 03-LANGCHAIN/06-tools-and-tool-calling/10-external-api-integration.md
+      - "Module 3.7: AI Agents":
+          - 03-LANGCHAIN/07-ai-agents/README.md
+          - "What is an AI agent?": 03-LANGCHAIN/07-ai-agents/01-what-is-an-ai-agent.md
+          - "Agent architecture": 03-LANGCHAIN/07-ai-agents/02-agent-architecture.md
+          - "Agent execution loop": 03-LANGCHAIN/07-ai-agents/03-agent-execution-loop.md
+          - "Model-driven tool selection": 03-LANGCHAIN/07-ai-agents/04-model-driven-tool-selection.md
+          - "Creating agents with create_agent": 03-LANGCHAIN/07-ai-agents/05-creating-agents-with-create-agent.md
+          - "Agent instructions": 03-LANGCHAIN/07-ai-agents/06-agent-instructions.md
+          - "Tool integration": 03-LANGCHAIN/07-ai-agents/07-tool-integration.md
+          - "Middleware": 03-LANGCHAIN/07-ai-agents/08-middleware.md
+          - "Agent state": 03-LANGCHAIN/07-ai-agents/09-agent-state.md
+          - "Streaming agent responses": 03-LANGCHAIN/07-ai-agents/10-streaming-agent-responses.md
+          - "Error handling": 03-LANGCHAIN/07-ai-agents/11-error-handling.md
+          - "Human approval workflows": 03-LANGCHAIN/07-ai-agents/12-human-approval-workflows.md
+      - "Module 3.8: Retrieval-Augmented Generation":
+          - 03-LANGCHAIN/08-retrieval-augmented-generation/README.md
+          - "What is RAG?": 03-LANGCHAIN/08-retrieval-augmented-generation/01-what-is-rag.md
+          - "Why do we need RAG?": 03-LANGCHAIN/08-retrieval-augmented-generation/02-why-do-we-need-rag.md
+          - "RAG architecture": 03-LANGCHAIN/08-retrieval-augmented-generation/03-rag-architecture.md
+          - "Document loaders": 03-LANGCHAIN/08-retrieval-augmented-generation/04-document-loaders.md
+          - "Document processing": 03-LANGCHAIN/08-retrieval-augmented-generation/05-document-processing.md
+          - "Text splitters": 03-LANGCHAIN/08-retrieval-augmented-generation/06-text-splitters.md
+          - "Chunking strategies": 03-LANGCHAIN/08-retrieval-augmented-generation/07-chunking-strategies.md
+          - "Embeddings": 03-LANGCHAIN/08-retrieval-augmented-generation/08-embeddings.md
+          - "Vector stores": 03-LANGCHAIN/08-retrieval-augmented-generation/09-vector-stores.md
+          - "Retrievers": 03-LANGCHAIN/08-retrieval-augmented-generation/10-retrievers.md
+          - "Similarity search": 03-LANGCHAIN/08-retrieval-augmented-generation/11-similarity-search.md
+          - "Metadata filtering": 03-LANGCHAIN/08-retrieval-augmented-generation/12-metadata-filtering.md
+          - "Building a RAG application": 03-LANGCHAIN/08-retrieval-augmented-generation/13-building-a-rag-application.md
+          - "Evaluating RAG responses": 03-LANGCHAIN/08-retrieval-augmented-generation/14-evaluating-rag-responses.md
+      - "Module 3.9: Advanced LangChain":
+          - 03-LANGCHAIN/09-advanced-langchain/README.md
+          - "Middleware architecture": 03-LANGCHAIN/09-advanced-langchain/01-middleware-architecture.md
+          - "Custom middleware": 03-LANGCHAIN/09-advanced-langchain/02-custom-middleware.md
+          - "Model fallbacks": 03-LANGCHAIN/09-advanced-langchain/03-model-fallbacks.md
+          - "Structured agent outputs": 03-LANGCHAIN/09-advanced-langchain/04-structured-agent-outputs.md
+          - "Streaming events": 03-LANGCHAIN/09-advanced-langchain/05-streaming-events.md
+          - "Tool execution control": 03-LANGCHAIN/09-advanced-langchain/06-tool-execution-control.md
+          - "Runtime context": 03-LANGCHAIN/09-advanced-langchain/07-runtime-context.md
+          - "State management": 03-LANGCHAIN/09-advanced-langchain/08-state-management.md
+          - "Error handling": 03-LANGCHAIN/09-advanced-langchain/09-error-handling.md
+          - "Application testing": 03-LANGCHAIN/09-advanced-langchain/10-application-testing.md
+      - "Practical Projects":
+          - "LLM chatbot": 03-LANGCHAIN/projects/01-llm-chatbot.md
+          - "AI research assistant": 03-LANGCHAIN/projects/02-ai-research-assistant.md
+          - "Tool-calling agent": 03-LANGCHAIN/projects/03-tool-calling-agent.md
+          - "PDF question-answering application": 03-LANGCHAIN/projects/04-pdf-question-answering-application.md
+          - "Customer support assistant": 03-LANGCHAIN/projects/05-customer-support-assistant.md
+  - "LangGraph":
+      - 04-LANGGRAPH/README.md
+      - "Module 4.1: Introduction":
+          - 04-LANGGRAPH/01-introduction/README.md
+          - "What is LangGraph?": 04-LANGGRAPH/01-introduction/01-what-is-langgraph.md
+          - "Why do we need LangGraph?": 04-LANGGRAPH/01-introduction/02-why-do-we-need-langgraph.md
+          - "LangChain vs LangGraph": 04-LANGGRAPH/01-introduction/03-langchain-vs-langgraph.md
+          - "Graph-based execution": 04-LANGGRAPH/01-introduction/04-graph-based-execution.md
+          - "Agent orchestration": 04-LANGGRAPH/01-introduction/05-agent-orchestration.md
+          - "LangGraph architecture": 04-LANGGRAPH/01-introduction/06-langgraph-architecture.md
+      - "Module 4.2: Core Concepts":
+          - 04-LANGGRAPH/02-core-concepts/README.md
+          - "State": 04-LANGGRAPH/02-core-concepts/01-state.md
+          - "Nodes": 04-LANGGRAPH/02-core-concepts/02-nodes.md
+          - "Edges": 04-LANGGRAPH/02-core-concepts/03-edges.md
+          - "Conditional edges": 04-LANGGRAPH/02-core-concepts/04-conditional-edges.md
+          - "Entry points": 04-LANGGRAPH/02-core-concepts/05-entry-points.md
+          - "End points": 04-LANGGRAPH/02-core-concepts/06-end-points.md
+          - "Graph compilation": 04-LANGGRAPH/02-core-concepts/07-graph-compilation.md
+          - "State updates": 04-LANGGRAPH/02-core-concepts/08-state-updates.md
+          - "Reducers": 04-LANGGRAPH/02-core-concepts/09-reducers.md
+          - "Message state": 04-LANGGRAPH/02-core-concepts/10-message-state.md
+      - "Module 4.3: Building Workflows":
+          - 04-LANGGRAPH/03-building-workflows/README.md
+          - "Creating a basic graph": 04-LANGGRAPH/03-building-workflows/01-creating-a-basic-graph.md
+          - "Defining state schemas": 04-LANGGRAPH/03-building-workflows/02-defining-state-schemas.md
+          - "Creating nodes": 04-LANGGRAPH/03-building-workflows/03-creating-nodes.md
+          - "Connecting nodes": 04-LANGGRAPH/03-building-workflows/04-connecting-nodes.md
+          - "Conditional routing": 04-LANGGRAPH/03-building-workflows/05-conditional-routing.md
+          - "Loops": 04-LANGGRAPH/03-building-workflows/06-loops.md
+          - "Parallel execution": 04-LANGGRAPH/03-building-workflows/07-parallel-execution.md
+          - "Error handling": 04-LANGGRAPH/03-building-workflows/08-error-handling.md
+          - "Workflow testing": 04-LANGGRAPH/03-building-workflows/09-workflow-testing.md
+      - "Module 4.4: Agent Development":
+          - 04-LANGGRAPH/04-agent-development/README.md
+          - "Building a ReAct-style agent": 04-LANGGRAPH/04-agent-development/01-building-a-react-style-agent.md
+          - "Tool integration": 04-LANGGRAPH/04-agent-development/02-tool-integration.md
+          - "Model-driven routing": 04-LANGGRAPH/04-agent-development/03-model-driven-routing.md
+          - "Tool execution nodes": 04-LANGGRAPH/04-agent-development/04-tool-execution-nodes.md
+          - "Agent loops": 04-LANGGRAPH/04-agent-development/05-agent-loops.md
+          - "Agent termination": 04-LANGGRAPH/04-agent-development/06-agent-termination.md
+          - "Custom agent workflows": 04-LANGGRAPH/04-agent-development/07-custom-agent-workflows.md
+      - "Module 4.5: Persistence and Memory":
+          - 04-LANGGRAPH/05-persistence-and-memory/README.md
+          - "Checkpointing": 04-LANGGRAPH/05-persistence-and-memory/01-checkpointing.md
+          - "Thread identifiers": 04-LANGGRAPH/05-persistence-and-memory/02-thread-identifiers.md
+          - "Persistent state": 04-LANGGRAPH/05-persistence-and-memory/03-persistent-state.md
+          - "Conversation history": 04-LANGGRAPH/05-persistence-and-memory/04-conversation-history.md
+          - "Short-term memory": 04-LANGGRAPH/05-persistence-and-memory/05-short-term-memory.md
+          - "Long-term memory": 04-LANGGRAPH/05-persistence-and-memory/06-long-term-memory.md
+          - "State recovery": 04-LANGGRAPH/05-persistence-and-memory/07-state-recovery.md
+          - "Resuming interrupted workflows": 04-LANGGRAPH/05-persistence-and-memory/08-resuming-interrupted-workflows.md
+      - "Module 4.6: Human-in-the-Loop":
+          - 04-LANGGRAPH/06-human-in-the-loop/README.md
+          - "What is human-in-the-loop?": 04-LANGGRAPH/06-human-in-the-loop/01-what-is-human-in-the-loop.md
+          - "Interrupts": 04-LANGGRAPH/06-human-in-the-loop/02-interrupts.md
+          - "Human approval": 04-LANGGRAPH/06-human-in-the-loop/03-human-approval.md
+          - "Workflow pauses": 04-LANGGRAPH/06-human-in-the-loop/04-workflow-pauses.md
+          - "Resume execution": 04-LANGGRAPH/06-human-in-the-loop/05-resume-execution.md
+          - "Manual review": 04-LANGGRAPH/06-human-in-the-loop/06-manual-review.md
+          - "Approval-based tool execution": 04-LANGGRAPH/06-human-in-the-loop/07-approval-based-tool-execution.md
+      - "Module 4.7: Multi-Agent Systems":
+          - 04-LANGGRAPH/07-multi-agent-systems/README.md
+          - "What is a multi-agent system?": 04-LANGGRAPH/07-multi-agent-systems/01-what-is-a-multi-agent-system.md
+          - "Single-agent vs multi-agent architecture": 04-LANGGRAPH/07-multi-agent-systems/02-single-agent-vs-multi-agent-architecture.md
+          - "Supervisor architecture": 04-LANGGRAPH/07-multi-agent-systems/03-supervisor-architecture.md
+          - "Network architecture": 04-LANGGRAPH/07-multi-agent-systems/04-network-architecture.md
+          - "Hierarchical agents": 04-LANGGRAPH/07-multi-agent-systems/05-hierarchical-agents.md
+          - "Agent collaboration": 04-LANGGRAPH/07-multi-agent-systems/06-agent-collaboration.md
+          - "Agent handoffs": 04-LANGGRAPH/07-multi-agent-systems/07-agent-handoffs.md
+          - "Shared state": 04-LANGGRAPH/07-multi-agent-systems/08-shared-state.md
+          - "Agent communication": 04-LANGGRAPH/07-multi-agent-systems/09-agent-communication.md
+          - "Multi-agent evaluation": 04-LANGGRAPH/07-multi-agent-systems/10-multi-agent-evaluation.md
+      - "Practical Projects":
+          - "Research workflow": 04-LANGGRAPH/projects/01-research-workflow.md
+          - "Multi-step customer support agent": 04-LANGGRAPH/projects/02-multi-step-customer-support-agent.md
+          - "Human-approved email agent": 04-LANGGRAPH/projects/03-human-approved-email-agent.md
+          - "Multi-agent research system": 04-LANGGRAPH/projects/04-multi-agent-research-system.md
+          - "Stateful document processing workflow": 04-LANGGRAPH/projects/05-stateful-document-processing-workflow.md
+  - "RAG":
+      - 05-RAG/README.md
+      - "Module 5.1: RAG Fundamentals":
+          - 05-RAG/01-rag-fundamentals/README.md
+          - "What is RAG?": 05-RAG/01-rag-fundamentals/01-what-is-rag.md
+          - "RAG architecture": 05-RAG/01-rag-fundamentals/02-rag-architecture.md
+          - "Retrieval vs generation": 05-RAG/01-rag-fundamentals/03-retrieval-vs-generation.md
+          - "Why LLMs need external knowledge": 05-RAG/01-rag-fundamentals/04-why-llms-need-external-knowledge.md
+          - "RAG vs fine-tuning": 05-RAG/01-rag-fundamentals/05-rag-vs-fine-tuning.md
+          - "RAG limitations": 05-RAG/01-rag-fundamentals/06-rag-limitations.md
+      - "Module 5.2: Document Ingestion":
+          - 05-RAG/02-document-ingestion/README.md
+          - "PDF ingestion": 05-RAG/02-document-ingestion/01-pdf-ingestion.md
+          - "Word documents": 05-RAG/02-document-ingestion/02-word-documents.md
+          - "Excel documents": 05-RAG/02-document-ingestion/03-excel-documents.md
+          - "CSV files": 05-RAG/02-document-ingestion/04-csv-files.md
+          - "Web page ingestion": 05-RAG/02-document-ingestion/05-web-page-ingestion.md
+          - "Database ingestion": 05-RAG/02-document-ingestion/06-database-ingestion.md
+          - "Metadata extraction": 05-RAG/02-document-ingestion/07-metadata-extraction.md
+          - "Document normalization": 05-RAG/02-document-ingestion/08-document-normalization.md
+          - "Data cleaning": 05-RAG/02-document-ingestion/09-data-cleaning.md
+      - "Module 5.3: Chunking Strategies":
+          - 05-RAG/03-chunking-strategies/README.md
+          - "Fixed-size chunking": 05-RAG/03-chunking-strategies/01-fixed-size-chunking.md
+          - "Recursive chunking": 05-RAG/03-chunking-strategies/02-recursive-chunking.md
+          - "Sentence-based chunking": 05-RAG/03-chunking-strategies/03-sentence-based-chunking.md
+          - "Semantic chunking": 05-RAG/03-chunking-strategies/04-semantic-chunking.md
+          - "Parent-child chunking": 05-RAG/03-chunking-strategies/05-parent-child-chunking.md
+          - "Overlapping chunks": 05-RAG/03-chunking-strategies/06-overlapping-chunks.md
+          - "Chunk size optimization": 05-RAG/03-chunking-strategies/07-chunk-size-optimization.md
+          - "Chunking evaluation": 05-RAG/03-chunking-strategies/08-chunking-evaluation.md
+      - "Module 5.4: Vector Databases":
+          - 05-RAG/04-vector-databases/README.md
+          - "What is a vector database?": 05-RAG/04-vector-databases/01-what-is-a-vector-database.md
+          - "Vector indexing": 05-RAG/04-vector-databases/02-vector-indexing.md
+          - "Similarity search": 05-RAG/04-vector-databases/03-similarity-search.md
+          - "Cosine similarity": 05-RAG/04-vector-databases/04-cosine-similarity.md
+          - "Euclidean distance": 05-RAG/04-vector-databases/05-euclidean-distance.md
+          - "Metadata filtering": 05-RAG/04-vector-databases/06-metadata-filtering.md
+          - "FAISS": 05-RAG/04-vector-databases/07-faiss.md
+          - "Chroma": 05-RAG/04-vector-databases/08-chroma.md
+          - "Qdrant": 05-RAG/04-vector-databases/09-qdrant.md
+          - "Pinecone": 05-RAG/04-vector-databases/10-pinecone.md
+          - "PostgreSQL with pgvector": 05-RAG/04-vector-databases/11-postgresql-with-pgvector.md
+      - "Module 5.5: Advanced Retrieval":
+          - 05-RAG/05-advanced-retrieval/README.md
+          - "Dense retrieval": 05-RAG/05-advanced-retrieval/01-dense-retrieval.md
+          - "Sparse retrieval": 05-RAG/05-advanced-retrieval/02-sparse-retrieval.md
+          - "Hybrid search": 05-RAG/05-advanced-retrieval/03-hybrid-search.md
+          - "Keyword search": 05-RAG/05-advanced-retrieval/04-keyword-search.md
+          - "Query rewriting": 05-RAG/05-advanced-retrieval/05-query-rewriting.md
+          - "Multi-query retrieval": 05-RAG/05-advanced-retrieval/06-multi-query-retrieval.md
+          - "Reranking": 05-RAG/05-advanced-retrieval/07-reranking.md
+          - "Contextual retrieval": 05-RAG/05-advanced-retrieval/08-contextual-retrieval.md
+          - "Parent document retrieval": 05-RAG/05-advanced-retrieval/09-parent-document-retrieval.md
+          - "Retrieval optimization": 05-RAG/05-advanced-retrieval/10-retrieval-optimization.md
+      - "Module 5.6: Advanced RAG Architectures":
+          - 05-RAG/06-advanced-rag-architectures/README.md
+          - "Corrective RAG": 05-RAG/06-advanced-rag-architectures/01-corrective-rag.md
+          - "Adaptive RAG": 05-RAG/06-advanced-rag-architectures/02-adaptive-rag.md
+          - "Self-RAG": 05-RAG/06-advanced-rag-architectures/03-self-rag.md
+          - "Agentic RAG": 05-RAG/06-advanced-rag-architectures/04-agentic-rag.md
+          - "Graph RAG": 05-RAG/06-advanced-rag-architectures/05-graph-rag.md
+          - "Multi-hop RAG": 05-RAG/06-advanced-rag-architectures/06-multi-hop-rag.md
+          - "Hybrid RAG": 05-RAG/06-advanced-rag-architectures/07-hybrid-rag.md
+          - "Multi-modal RAG": 05-RAG/06-advanced-rag-architectures/08-multi-modal-rag.md
+      - "Module 5.7: RAG Evaluation":
+          - 05-RAG/07-rag-evaluation/README.md
+          - "Retrieval precision": 05-RAG/07-rag-evaluation/01-retrieval-precision.md
+          - "Retrieval recall": 05-RAG/07-rag-evaluation/02-retrieval-recall.md
+          - "Context relevance": 05-RAG/07-rag-evaluation/03-context-relevance.md
+          - "Answer relevance": 05-RAG/07-rag-evaluation/04-answer-relevance.md
+          - "Faithfulness": 05-RAG/07-rag-evaluation/05-faithfulness.md
+          - "Groundedness": 05-RAG/07-rag-evaluation/06-groundedness.md
+          - "RAGAS": 05-RAG/07-rag-evaluation/07-ragas.md
+          - "DeepEval": 05-RAG/07-rag-evaluation/08-deepeval.md
+          - "Evaluation datasets": 05-RAG/07-rag-evaluation/09-evaluation-datasets.md
+          - "Improving retrieval quality": 05-RAG/07-rag-evaluation/10-improving-retrieval-quality.md
+      - "Practical Projects":
+          - "PDF assistant": 05-RAG/projects/01-pdf-assistant.md
+          - "Company knowledge assistant": 05-RAG/projects/02-company-knowledge-assistant.md
+          - "Multi-document RAG": 05-RAG/projects/03-multi-document-rag.md
+          - "SQL and document hybrid assistant": 05-RAG/projects/04-sql-and-document-hybrid-assistant.md
+          - "Agentic research system": 05-RAG/projects/05-agentic-research-system.md
+  - "MCP":
+      - 06-MCP/README.md
+      - "Module 7.1: MCP Fundamentals":
+          - 06-MCP/01-mcp-fundamentals/README.md
+          - "What is MCP?": 06-MCP/01-mcp-fundamentals/01-what-is-mcp.md
+          - "Why MCP exists": 06-MCP/01-mcp-fundamentals/02-why-mcp-exists.md
+          - "MCP architecture": 06-MCP/01-mcp-fundamentals/03-mcp-architecture.md
+          - "MCP host": 06-MCP/01-mcp-fundamentals/04-mcp-host.md
+          - "MCP client": 06-MCP/01-mcp-fundamentals/05-mcp-client.md
+          - "MCP server": 06-MCP/01-mcp-fundamentals/06-mcp-server.md
+          - "JSON-RPC fundamentals": 06-MCP/01-mcp-fundamentals/07-json-rpc-fundamentals.md
+          - "MCP lifecycle": 06-MCP/01-mcp-fundamentals/08-mcp-lifecycle.md
+      - "Module 7.2: MCP Capabilities":
+          - 06-MCP/02-mcp-capabilities/README.md
+          - "Tools": 06-MCP/02-mcp-capabilities/01-tools.md
+          - "Resources": 06-MCP/02-mcp-capabilities/02-resources.md
+          - "Prompts": 06-MCP/02-mcp-capabilities/03-prompts.md
+          - "Sampling": 06-MCP/02-mcp-capabilities/04-sampling.md
+          - "Notifications": 06-MCP/02-mcp-capabilities/05-notifications.md
+          - "Transport mechanisms": 06-MCP/02-mcp-capabilities/06-transport-mechanisms.md
+          - "Protocol communication": 06-MCP/02-mcp-capabilities/07-protocol-communication.md
+      - "Module 7.3: Building MCP Servers":
+          - 06-MCP/03-building-mcp-servers/README.md
+          - "MCP development environment": 06-MCP/03-building-mcp-servers/01-mcp-development-environment.md
+          - "Installing the Python SDK": 06-MCP/03-building-mcp-servers/02-installing-the-python-sdk.md
+          - "Creating an MCP server": 06-MCP/03-building-mcp-servers/03-creating-an-mcp-server.md
+          - "Registering tools": 06-MCP/03-building-mcp-servers/04-registering-tools.md
+          - "Creating resources": 06-MCP/03-building-mcp-servers/05-creating-resources.md
+          - "Creating prompts": 06-MCP/03-building-mcp-servers/06-creating-prompts.md
+          - "Running the server": 06-MCP/03-building-mcp-servers/07-running-the-server.md
+          - "Testing the server": 06-MCP/03-building-mcp-servers/08-testing-the-server.md
+      - "Module 7.4: MCP Client Development":
+          - 06-MCP/04-mcp-client-development/README.md
+          - "What is an MCP client?": 06-MCP/04-mcp-client-development/01-what-is-an-mcp-client.md
+          - "Connecting to MCP servers": 06-MCP/04-mcp-client-development/02-connecting-to-mcp-servers.md
+          - "Discovering available tools": 06-MCP/04-mcp-client-development/03-discovering-available-tools.md
+          - "Calling MCP tools": 06-MCP/04-mcp-client-development/04-calling-mcp-tools.md
+          - "Handling tool responses": 06-MCP/04-mcp-client-development/05-handling-tool-responses.md
+          - "Managing connections": 06-MCP/04-mcp-client-development/06-managing-connections.md
+          - "Error handling": 06-MCP/04-mcp-client-development/07-error-handling.md
+      - "Module 7.5: MCP and AI Agents":
+          - 06-MCP/05-mcp-and-ai-agents/README.md
+          - "MCP with LangChain": 06-MCP/05-mcp-and-ai-agents/01-mcp-with-langchain.md
+          - "MCP with LangGraph": 06-MCP/05-mcp-and-ai-agents/02-mcp-with-langgraph.md
+          - "Tool integration": 06-MCP/05-mcp-and-ai-agents/03-tool-integration.md
+          - "Multiple MCP servers": 06-MCP/05-mcp-and-ai-agents/04-multiple-mcp-servers.md
+          - "Agent-driven MCP execution": 06-MCP/05-mcp-and-ai-agents/05-agent-driven-mcp-execution.md
+          - "Building an MCP-powered assistant": 06-MCP/05-mcp-and-ai-agents/06-building-an-mcp-powered-assistant.md
+      - "Module 7.6: MCP Security":
+          - 06-MCP/06-mcp-security/README.md
+          - "Authentication": 06-MCP/06-mcp-security/01-authentication.md
+          - "Authorization": 06-MCP/06-mcp-security/02-authorization.md
+          - "Tool permissions": 06-MCP/06-mcp-security/03-tool-permissions.md
+          - "Untrusted input": 06-MCP/06-mcp-security/04-untrusted-input.md
+          - "Prompt injection": 06-MCP/06-mcp-security/05-prompt-injection.md
+          - "Server security": 06-MCP/06-mcp-security/06-server-security.md
+          - "Secure deployment": 06-MCP/06-mcp-security/07-secure-deployment.md
+      - "Practical Projects":
+          - "File system MCP server": 06-MCP/projects/01-file-system-mcp-server.md
+          - "Database MCP server": 06-MCP/projects/02-database-mcp-server.md
+          - "Weather MCP server": 06-MCP/projects/03-weather-mcp-server.md
+          - "MCP-powered research assistant": 06-MCP/projects/04-mcp-powered-research-assistant.md
+          - "Multi-server AI assistant": 06-MCP/projects/05-multi-server-ai-assistant.md
+  - "Agent Engineering":
+      - 07-AGENT-ENGINEERING/README.md
+      - "Module 6.1: Agent Fundamentals":
+          - 07-AGENT-ENGINEERING/01-agent-fundamentals/README.md
+          - "Agent architecture": 07-AGENT-ENGINEERING/01-agent-fundamentals/01-agent-architecture.md
+          - "Perception and reasoning": 07-AGENT-ENGINEERING/01-agent-fundamentals/02-perception-and-reasoning.md
+          - "Planning and execution": 07-AGENT-ENGINEERING/01-agent-fundamentals/03-planning-and-execution.md
+          - "Tool selection": 07-AGENT-ENGINEERING/01-agent-fundamentals/04-tool-selection.md
+          - "Observation and feedback": 07-AGENT-ENGINEERING/01-agent-fundamentals/05-observation-and-feedback.md
+          - "Agent execution loops": 07-AGENT-ENGINEERING/01-agent-fundamentals/06-agent-execution-loops.md
+      - "Module 6.2: Agent Patterns":
+          - 07-AGENT-ENGINEERING/02-agent-patterns/README.md
+          - "ReAct": 07-AGENT-ENGINEERING/02-agent-patterns/01-react.md
+          - "Plan and execute": 07-AGENT-ENGINEERING/02-agent-patterns/02-plan-and-execute.md
+          - "Reflection": 07-AGENT-ENGINEERING/02-agent-patterns/03-reflection.md
+          - "Self-correction": 07-AGENT-ENGINEERING/02-agent-patterns/04-self-correction.md
+          - "Routing": 07-AGENT-ENGINEERING/02-agent-patterns/05-routing.md
+          - "Parallelization": 07-AGENT-ENGINEERING/02-agent-patterns/06-parallelization.md
+          - "Orchestrator-worker": 07-AGENT-ENGINEERING/02-agent-patterns/07-orchestrator-worker.md
+          - "Evaluator-optimizer": 07-AGENT-ENGINEERING/02-agent-patterns/08-evaluator-optimizer.md
+          - "Supervisor agents": 07-AGENT-ENGINEERING/02-agent-patterns/09-supervisor-agents.md
+          - "Hierarchical agents": 07-AGENT-ENGINEERING/02-agent-patterns/10-hierarchical-agents.md
+      - "Module 6.3: Context Engineering":
+          - 07-AGENT-ENGINEERING/03-context-engineering/README.md
+          - "What is context engineering?": 07-AGENT-ENGINEERING/03-context-engineering/01-what-is-context-engineering.md
+          - "Context windows": 07-AGENT-ENGINEERING/03-context-engineering/02-context-windows.md
+          - "System instructions": 07-AGENT-ENGINEERING/03-context-engineering/03-system-instructions.md
+          - "Conversation history": 07-AGENT-ENGINEERING/03-context-engineering/04-conversation-history.md
+          - "Retrieved context": 07-AGENT-ENGINEERING/03-context-engineering/05-retrieved-context.md
+          - "Tool descriptions": 07-AGENT-ENGINEERING/03-context-engineering/06-tool-descriptions.md
+          - "Context compression": 07-AGENT-ENGINEERING/03-context-engineering/07-context-compression.md
+          - "Context selection": 07-AGENT-ENGINEERING/03-context-engineering/08-context-selection.md
+          - "Context management": 07-AGENT-ENGINEERING/03-context-engineering/09-context-management.md
+          - "Context quality evaluation": 07-AGENT-ENGINEERING/03-context-engineering/10-context-quality-evaluation.md
+      - "Module 6.4: Agent Memory":
+          - 07-AGENT-ENGINEERING/04-agent-memory/README.md
+          - "Short-term memory": 07-AGENT-ENGINEERING/04-agent-memory/01-short-term-memory.md
+          - "Long-term memory": 07-AGENT-ENGINEERING/04-agent-memory/02-long-term-memory.md
+          - "Episodic memory": 07-AGENT-ENGINEERING/04-agent-memory/03-episodic-memory.md
+          - "Semantic memory": 07-AGENT-ENGINEERING/04-agent-memory/04-semantic-memory.md
+          - "Procedural memory": 07-AGENT-ENGINEERING/04-agent-memory/05-procedural-memory.md
+          - "Memory storage": 07-AGENT-ENGINEERING/04-agent-memory/06-memory-storage.md
+          - "Memory retrieval": 07-AGENT-ENGINEERING/04-agent-memory/07-memory-retrieval.md
+          - "Memory summarization": 07-AGENT-ENGINEERING/04-agent-memory/08-memory-summarization.md
+          - "Memory evaluation": 07-AGENT-ENGINEERING/04-agent-memory/09-memory-evaluation.md
+      - "Module 6.5: Advanced Agent Design":
+          - 07-AGENT-ENGINEERING/05-advanced-agent-design/README.md
+          - "Single-agent architecture": 07-AGENT-ENGINEERING/05-advanced-agent-design/01-single-agent-architecture.md
+          - "Multi-agent architecture": 07-AGENT-ENGINEERING/05-advanced-agent-design/02-multi-agent-architecture.md
+          - "Agent communication": 07-AGENT-ENGINEERING/05-advanced-agent-design/03-agent-communication.md
+          - "Agent handoffs": 07-AGENT-ENGINEERING/05-advanced-agent-design/04-agent-handoffs.md
+          - "Task decomposition": 07-AGENT-ENGINEERING/05-advanced-agent-design/05-task-decomposition.md
+          - "Agent coordination": 07-AGENT-ENGINEERING/05-advanced-agent-design/06-agent-coordination.md
+          - "Failure recovery": 07-AGENT-ENGINEERING/05-advanced-agent-design/07-failure-recovery.md
+          - "Workflow optimization": 07-AGENT-ENGINEERING/05-advanced-agent-design/08-workflow-optimization.md
+      - "Practical Projects":
+          - "Autonomous research assistant": 07-AGENT-ENGINEERING/projects/01-autonomous-research-assistant.md
+          - "Planning and execution agent": 07-AGENT-ENGINEERING/projects/02-planning-and-execution-agent.md
+          - "Memory-enabled assistant": 07-AGENT-ENGINEERING/projects/03-memory-enabled-assistant.md
+          - "Multi-agent task management system": 07-AGENT-ENGINEERING/projects/04-multi-agent-task-management-system.md
+  - "Evaluation":
+      - 08-EVALUATION-AND-OBSERVABILITY/README.md
+      - "Module 8.1: Observability Fundamentals":
+          - 08-EVALUATION-AND-OBSERVABILITY/01-observability-fundamentals/README.md
+          - "What is observability?": 08-EVALUATION-AND-OBSERVABILITY/01-observability-fundamentals/01-what-is-observability.md
+          - "Logging": 08-EVALUATION-AND-OBSERVABILITY/01-observability-fundamentals/02-logging.md
+          - "Tracing": 08-EVALUATION-AND-OBSERVABILITY/01-observability-fundamentals/03-tracing.md
+          - "Metrics": 08-EVALUATION-AND-OBSERVABILITY/01-observability-fundamentals/04-metrics.md
+          - "Distributed tracing": 08-EVALUATION-AND-OBSERVABILITY/01-observability-fundamentals/05-distributed-tracing.md
+          - "Agent execution traces": 08-EVALUATION-AND-OBSERVABILITY/01-observability-fundamentals/06-agent-execution-traces.md
+      - "Module 8.2: LangSmith":
+          - 08-EVALUATION-AND-OBSERVABILITY/02-langsmith/README.md
+          - "Introduction to LangSmith": 08-EVALUATION-AND-OBSERVABILITY/02-langsmith/01-introduction-to-langsmith.md
+          - "Project configuration": 08-EVALUATION-AND-OBSERVABILITY/02-langsmith/02-project-configuration.md
+          - "Tracing": 08-EVALUATION-AND-OBSERVABILITY/02-langsmith/03-tracing.md
+          - "Debugging": 08-EVALUATION-AND-OBSERVABILITY/02-langsmith/04-debugging.md
+          - "Datasets": 08-EVALUATION-AND-OBSERVABILITY/02-langsmith/05-datasets.md
+          - "Evaluation": 08-EVALUATION-AND-OBSERVABILITY/02-langsmith/06-evaluation.md
+          - "Monitoring": 08-EVALUATION-AND-OBSERVABILITY/02-langsmith/07-monitoring.md
+          - "Production observability": 08-EVALUATION-AND-OBSERVABILITY/02-langsmith/08-production-observability.md
+      - "Module 8.3: Evaluation":
+          - 08-EVALUATION-AND-OBSERVABILITY/03-evaluation/README.md
+          - "Model evaluation": 08-EVALUATION-AND-OBSERVABILITY/03-evaluation/01-model-evaluation.md
+          - "Agent evaluation": 08-EVALUATION-AND-OBSERVABILITY/03-evaluation/02-agent-evaluation.md
+          - "Tool selection accuracy": 08-EVALUATION-AND-OBSERVABILITY/03-evaluation/03-tool-selection-accuracy.md
+          - "Task completion": 08-EVALUATION-AND-OBSERVABILITY/03-evaluation/04-task-completion.md
+          - "Response quality": 08-EVALUATION-AND-OBSERVABILITY/03-evaluation/05-response-quality.md
+          - "Faithfulness": 08-EVALUATION-AND-OBSERVABILITY/03-evaluation/06-faithfulness.md
+          - "Latency evaluation": 08-EVALUATION-AND-OBSERVABILITY/03-evaluation/07-latency-evaluation.md
+          - "Cost evaluation": 08-EVALUATION-AND-OBSERVABILITY/03-evaluation/08-cost-evaluation.md
+          - "Human evaluation": 08-EVALUATION-AND-OBSERVABILITY/03-evaluation/09-human-evaluation.md
+          - "Regression testing": 08-EVALUATION-AND-OBSERVABILITY/03-evaluation/10-regression-testing.md
+      - "Module 8.4: Testing":
+          - 08-EVALUATION-AND-OBSERVABILITY/04-testing/README.md
+          - "Unit testing": 08-EVALUATION-AND-OBSERVABILITY/04-testing/01-unit-testing.md
+          - "Integration testing": 08-EVALUATION-AND-OBSERVABILITY/04-testing/02-integration-testing.md
+          - "End-to-end testing": 08-EVALUATION-AND-OBSERVABILITY/04-testing/03-end-to-end-testing.md
+          - "Mocking model responses": 08-EVALUATION-AND-OBSERVABILITY/04-testing/04-mocking-model-responses.md
+          - "Tool testing": 08-EVALUATION-AND-OBSERVABILITY/04-testing/05-tool-testing.md
+          - "Agent workflow testing": 08-EVALUATION-AND-OBSERVABILITY/04-testing/06-agent-workflow-testing.md
+          - "Evaluation datasets": 08-EVALUATION-AND-OBSERVABILITY/04-testing/07-evaluation-datasets.md
+          - "Continuous evaluation": 08-EVALUATION-AND-OBSERVABILITY/04-testing/08-continuous-evaluation.md
+      - "Module 8.5: Additional Tools":
+          - 08-EVALUATION-AND-OBSERVABILITY/05-additional-tools/README.md
+          - "Langfuse": 08-EVALUATION-AND-OBSERVABILITY/05-additional-tools/01-langfuse.md
+          - "RAGAS": 08-EVALUATION-AND-OBSERVABILITY/05-additional-tools/02-ragas.md
+          - "DeepEval": 08-EVALUATION-AND-OBSERVABILITY/05-additional-tools/03-deepeval.md
+          - "OpenTelemetry": 08-EVALUATION-AND-OBSERVABILITY/05-additional-tools/04-opentelemetry.md
+          - "Pytest": 08-EVALUATION-AND-OBSERVABILITY/05-additional-tools/05-pytest.md
+      - "Practical Projects":
+          - "Agent evaluation dashboard": 08-EVALUATION-AND-OBSERVABILITY/projects/01-agent-evaluation-dashboard.md
+          - "RAG quality testing": 08-EVALUATION-AND-OBSERVABILITY/projects/02-rag-quality-testing.md
+          - "LangSmith tracing application": 08-EVALUATION-AND-OBSERVABILITY/projects/03-langsmith-tracing-application.md
+          - "Automated agent regression testing": 08-EVALUATION-AND-OBSERVABILITY/projects/04-automated-agent-regression-testing.md
+  - "Enterprise AI":
+      - 09-ENTERPRISE-AI/README.md
+      - "Module 9.1: Enterprise Architecture":
+          - 09-ENTERPRISE-AI/01-enterprise-architecture/README.md
+          - "Enterprise AI architecture": 09-ENTERPRISE-AI/01-enterprise-architecture/01-enterprise-ai-architecture.md
+          - "Microservices": 09-ENTERPRISE-AI/01-enterprise-architecture/02-microservices.md
+          - "API gateways": 09-ENTERPRISE-AI/01-enterprise-architecture/03-api-gateways.md
+          - "Event-driven architecture": 09-ENTERPRISE-AI/01-enterprise-architecture/04-event-driven-architecture.md
+          - "Message queues": 09-ENTERPRISE-AI/01-enterprise-architecture/05-message-queues.md
+          - "Distributed systems": 09-ENTERPRISE-AI/01-enterprise-architecture/06-distributed-systems.md
+          - "Agent orchestration architecture": 09-ENTERPRISE-AI/01-enterprise-architecture/07-agent-orchestration-architecture.md
+          - "Multi-tenant applications": 09-ENTERPRISE-AI/01-enterprise-architecture/08-multi-tenant-applications.md
+      - "Module 9.2: Security":
+          - 09-ENTERPRISE-AI/02-security/README.md
+          - "API key management": 09-ENTERPRISE-AI/02-security/01-api-key-management.md
+          - "Secrets management": 09-ENTERPRISE-AI/02-security/02-secrets-management.md
+          - "Authentication": 09-ENTERPRISE-AI/02-security/03-authentication.md
+          - "Authorization": 09-ENTERPRISE-AI/02-security/04-authorization.md
+          - "Role-based access control": 09-ENTERPRISE-AI/02-security/05-role-based-access-control.md
+          - "Data privacy": 09-ENTERPRISE-AI/02-security/06-data-privacy.md
+          - "Prompt injection": 09-ENTERPRISE-AI/02-security/07-prompt-injection.md
+          - "Jailbreak risks": 09-ENTERPRISE-AI/02-security/08-jailbreak-risks.md
+          - "Data leakage": 09-ENTERPRISE-AI/02-security/09-data-leakage.md
+          - "Tool permission management": 09-ENTERPRISE-AI/02-security/10-tool-permission-management.md
+          - "Human approval": 09-ENTERPRISE-AI/02-security/11-human-approval.md
+          - "Audit logging": 09-ENTERPRISE-AI/02-security/12-audit-logging.md
+      - "Module 9.3: Reliability":
+          - 09-ENTERPRISE-AI/03-reliability/README.md
+          - "Retry strategies": 09-ENTERPRISE-AI/03-reliability/01-retry-strategies.md
+          - "Exponential backoff": 09-ENTERPRISE-AI/03-reliability/02-exponential-backoff.md
+          - "Timeouts": 09-ENTERPRISE-AI/03-reliability/03-timeouts.md
+          - "Circuit breakers": 09-ENTERPRISE-AI/03-reliability/04-circuit-breakers.md
+          - "Model fallbacks": 09-ENTERPRISE-AI/03-reliability/05-model-fallbacks.md
+          - "Rate limiting": 09-ENTERPRISE-AI/03-reliability/06-rate-limiting.md
+          - "Idempotency": 09-ENTERPRISE-AI/03-reliability/07-idempotency.md
+          - "Fault tolerance": 09-ENTERPRISE-AI/03-reliability/08-fault-tolerance.md
+          - "Error recovery": 09-ENTERPRISE-AI/03-reliability/09-error-recovery.md
+          - "Graceful degradation": 09-ENTERPRISE-AI/03-reliability/10-graceful-degradation.md
+      - "Module 9.4: Performance Optimization":
+          - 09-ENTERPRISE-AI/04-performance-optimization/README.md
+          - "Token optimization": 09-ENTERPRISE-AI/04-performance-optimization/01-token-optimization.md
+          - "Model selection": 09-ENTERPRISE-AI/04-performance-optimization/02-model-selection.md
+          - "Caching": 09-ENTERPRISE-AI/04-performance-optimization/03-caching.md
+          - "Semantic caching": 09-ENTERPRISE-AI/04-performance-optimization/04-semantic-caching.md
+          - "Parallel execution": 09-ENTERPRISE-AI/04-performance-optimization/05-parallel-execution.md
+          - "Async processing": 09-ENTERPRISE-AI/04-performance-optimization/06-async-processing.md
+          - "Batch processing": 09-ENTERPRISE-AI/04-performance-optimization/07-batch-processing.md
+          - "Latency optimization": 09-ENTERPRISE-AI/04-performance-optimization/08-latency-optimization.md
+          - "Cost optimization": 09-ENTERPRISE-AI/04-performance-optimization/09-cost-optimization.md
+          - "Throughput optimization": 09-ENTERPRISE-AI/04-performance-optimization/10-throughput-optimization.md
+      - "Module 9.5: Guardrails":
+          - 09-ENTERPRISE-AI/05-guardrails/README.md
+          - "Input validation": 09-ENTERPRISE-AI/05-guardrails/01-input-validation.md
+          - "Output validation": 09-ENTERPRISE-AI/05-guardrails/02-output-validation.md
+          - "Content filtering": 09-ENTERPRISE-AI/05-guardrails/03-content-filtering.md
+          - "Structured output validation": 09-ENTERPRISE-AI/05-guardrails/04-structured-output-validation.md
+          - "Tool execution policies": 09-ENTERPRISE-AI/05-guardrails/05-tool-execution-policies.md
+          - "Human approval workflows": 09-ENTERPRISE-AI/05-guardrails/06-human-approval-workflows.md
+          - "Safety evaluation": 09-ENTERPRISE-AI/05-guardrails/07-safety-evaluation.md
+      - "Practical Projects":
+          - "Secure enterprise assistant": 09-ENTERPRISE-AI/projects/01-secure-enterprise-assistant.md
+          - "Multi-tenant customer support agent": 09-ENTERPRISE-AI/projects/02-multi-tenant-customer-support-agent.md
+          - "Production-ready document assistant": 09-ENTERPRISE-AI/projects/03-production-ready-document-assistant.md
+          - "Enterprise AI workflow with approval controls": 09-ENTERPRISE-AI/projects/04-enterprise-ai-workflow-with-approval-controls.md
+  - "Cloud and Deployment":
+      - 10-CLOUD-AND-DEPLOYMENT/README.md
+      - "Module 10.1: Cloud Fundamentals":
+          - 10-CLOUD-AND-DEPLOYMENT/01-cloud-fundamentals/README.md
+          - "What is cloud computing?": 10-CLOUD-AND-DEPLOYMENT/01-cloud-fundamentals/01-what-is-cloud-computing.md
+          - "IaaS, PaaS and SaaS": 10-CLOUD-AND-DEPLOYMENT/01-cloud-fundamentals/02-iaas-paas-and-saas.md
+          - "Compute": 10-CLOUD-AND-DEPLOYMENT/01-cloud-fundamentals/03-compute.md
+          - "Storage": 10-CLOUD-AND-DEPLOYMENT/01-cloud-fundamentals/04-storage.md
+          - "Networking": 10-CLOUD-AND-DEPLOYMENT/01-cloud-fundamentals/05-networking.md
+          - "IAM": 10-CLOUD-AND-DEPLOYMENT/01-cloud-fundamentals/06-iam.md
+          - "Cloud monitoring": 10-CLOUD-AND-DEPLOYMENT/01-cloud-fundamentals/07-cloud-monitoring.md
+      - "Module 10.2: AWS Fundamentals":
+          - 10-CLOUD-AND-DEPLOYMENT/02-aws-fundamentals/README.md
+          - "AWS account and console": 10-CLOUD-AND-DEPLOYMENT/02-aws-fundamentals/01-aws-account-and-console.md
+          - "IAM": 10-CLOUD-AND-DEPLOYMENT/02-aws-fundamentals/02-iam.md
+          - "EC2": 10-CLOUD-AND-DEPLOYMENT/02-aws-fundamentals/03-ec2.md
+          - "S3": 10-CLOUD-AND-DEPLOYMENT/02-aws-fundamentals/04-s3.md
+          - "Lambda": 10-CLOUD-AND-DEPLOYMENT/02-aws-fundamentals/05-lambda.md
+          - "API Gateway": 10-CLOUD-AND-DEPLOYMENT/02-aws-fundamentals/06-api-gateway.md
+          - "CloudWatch": 10-CLOUD-AND-DEPLOYMENT/02-aws-fundamentals/07-cloudwatch.md
+          - "Secrets Manager": 10-CLOUD-AND-DEPLOYMENT/02-aws-fundamentals/08-secrets-manager.md
+          - "Bedrock": 10-CLOUD-AND-DEPLOYMENT/02-aws-fundamentals/09-bedrock.md
+      - "Module 10.3: AWS Bedrock":
+          - 10-CLOUD-AND-DEPLOYMENT/03-aws-bedrock/README.md
+          - "What is Amazon Bedrock?": 10-CLOUD-AND-DEPLOYMENT/03-aws-bedrock/01-what-is-amazon-bedrock.md
+          - "Foundation models": 10-CLOUD-AND-DEPLOYMENT/03-aws-bedrock/02-foundation-models.md
+          - "Model invocation": 10-CLOUD-AND-DEPLOYMENT/03-aws-bedrock/03-model-invocation.md
+          - "Model access": 10-CLOUD-AND-DEPLOYMENT/03-aws-bedrock/04-model-access.md
+          - "Knowledge bases": 10-CLOUD-AND-DEPLOYMENT/03-aws-bedrock/05-knowledge-bases.md
+          - "Guardrails": 10-CLOUD-AND-DEPLOYMENT/03-aws-bedrock/06-guardrails.md
+          - "Agent capabilities": 10-CLOUD-AND-DEPLOYMENT/03-aws-bedrock/07-agent-capabilities.md
+          - "Model evaluation": 10-CLOUD-AND-DEPLOYMENT/03-aws-bedrock/08-model-evaluation.md
+          - "Cost management": 10-CLOUD-AND-DEPLOYMENT/03-aws-bedrock/09-cost-management.md
+      - "Module 10.4: AgentCore":
+          - 10-CLOUD-AND-DEPLOYMENT/04-agentcore/README.md
+          - "AgentCore overview": 10-CLOUD-AND-DEPLOYMENT/04-agentcore/01-agentcore-overview.md
+          - "Runtime concepts": 10-CLOUD-AND-DEPLOYMENT/04-agentcore/02-runtime-concepts.md
+          - "Identity": 10-CLOUD-AND-DEPLOYMENT/04-agentcore/03-identity.md
+          - "Gateway": 10-CLOUD-AND-DEPLOYMENT/04-agentcore/04-gateway.md
+          - "Memory": 10-CLOUD-AND-DEPLOYMENT/04-agentcore/05-memory.md
+          - "Observability": 10-CLOUD-AND-DEPLOYMENT/04-agentcore/06-observability.md
+          - "Secure agent deployment": 10-CLOUD-AND-DEPLOYMENT/04-agentcore/07-secure-agent-deployment.md
+          - "Integration with agent frameworks": 10-CLOUD-AND-DEPLOYMENT/04-agentcore/08-integration-with-agent-frameworks.md
+      - "Module 10.5: Docker":
+          - 10-CLOUD-AND-DEPLOYMENT/05-docker/README.md
+          - "What is Docker?": 10-CLOUD-AND-DEPLOYMENT/05-docker/01-what-is-docker.md
+          - "Containers": 10-CLOUD-AND-DEPLOYMENT/05-docker/02-containers.md
+          - "Images": 10-CLOUD-AND-DEPLOYMENT/05-docker/03-images.md
+          - "Dockerfile": 10-CLOUD-AND-DEPLOYMENT/05-docker/04-dockerfile.md
+          - "Docker Compose": 10-CLOUD-AND-DEPLOYMENT/05-docker/05-docker-compose.md
+          - "Environment variables": 10-CLOUD-AND-DEPLOYMENT/05-docker/06-environment-variables.md
+          - "Container networking": 10-CLOUD-AND-DEPLOYMENT/05-docker/07-container-networking.md
+          - "Deploying FastAPI applications": 10-CLOUD-AND-DEPLOYMENT/05-docker/08-deploying-fastapi-applications.md
+      - "Module 10.6: Production Deployment":
+          - 10-CLOUD-AND-DEPLOYMENT/06-production-deployment/README.md
+          - "Application packaging": 10-CLOUD-AND-DEPLOYMENT/06-production-deployment/01-application-packaging.md
+          - "CI/CD": 10-CLOUD-AND-DEPLOYMENT/06-production-deployment/02-ci-cd.md
+          - "Environment configuration": 10-CLOUD-AND-DEPLOYMENT/06-production-deployment/03-environment-configuration.md
+          - "Cloud deployment": 10-CLOUD-AND-DEPLOYMENT/06-production-deployment/04-cloud-deployment.md
+          - "Database connections": 10-CLOUD-AND-DEPLOYMENT/06-production-deployment/05-database-connections.md
+          - "Monitoring": 10-CLOUD-AND-DEPLOYMENT/06-production-deployment/06-monitoring.md
+          - "Logging": 10-CLOUD-AND-DEPLOYMENT/06-production-deployment/07-logging.md
+          - "Scaling": 10-CLOUD-AND-DEPLOYMENT/06-production-deployment/08-scaling.md
+          - "Rollbacks": 10-CLOUD-AND-DEPLOYMENT/06-production-deployment/09-rollbacks.md
+          - "Cost management": 10-CLOUD-AND-DEPLOYMENT/06-production-deployment/10-cost-management.md
+      - "Practical Projects":
+          - "Deploy a LangChain application": 10-CLOUD-AND-DEPLOYMENT/projects/01-deploy-a-langchain-application.md
+          - "Dockerize a FastAPI agent": 10-CLOUD-AND-DEPLOYMENT/projects/02-dockerize-a-fastapi-agent.md
+          - "Deploy a RAG application": 10-CLOUD-AND-DEPLOYMENT/projects/03-deploy-a-rag-application.md
+          - "Deploy an AWS Bedrock-based agent": 10-CLOUD-AND-DEPLOYMENT/projects/04-deploy-an-aws-bedrock-based-agent.md
+  - "Projects":
+      - 11-PRACTICAL-PROJECTS/README.md
+      - "Beginner Projects":
+          - "Basic LLM chatbot": 11-PRACTICAL-PROJECTS/beginner/01-basic-llm-chatbot.md
+          - "AI writing assistant": 11-PRACTICAL-PROJECTS/beginner/02-ai-writing-assistant.md
+          - "AI calculator": 11-PRACTICAL-PROJECTS/beginner/03-ai-calculator.md
+          - "Tool-calling assistant": 11-PRACTICAL-PROJECTS/beginner/04-tool-calling-assistant.md
+          - "Structured data extractor": 11-PRACTICAL-PROJECTS/beginner/05-structured-data-extractor.md
+      - "Intermediate Projects":
+          - "PDF question-answering agent": 11-PRACTICAL-PROJECTS/intermediate/01-pdf-question-answering-agent.md
+          - "Website research assistant": 11-PRACTICAL-PROJECTS/intermediate/02-website-research-assistant.md
+          - "Customer support agent": 11-PRACTICAL-PROJECTS/intermediate/03-customer-support-agent.md
+          - "AI email assistant": 11-PRACTICAL-PROJECTS/intermediate/04-ai-email-assistant.md
+          - "Database query assistant": 11-PRACTICAL-PROJECTS/intermediate/05-database-query-assistant.md
+          - "Personal knowledge assistant": 11-PRACTICAL-PROJECTS/intermediate/06-personal-knowledge-assistant.md
+          - "Meeting summarization application": 11-PRACTICAL-PROJECTS/intermediate/07-meeting-summarization-application.md
+      - "Advanced Projects":
+          - "Multi-agent research system": 11-PRACTICAL-PROJECTS/advanced/01-multi-agent-research-system.md
+          - "Agentic RAG application": 11-PRACTICAL-PROJECTS/advanced/02-agentic-rag-application.md
+          - "MCP-powered assistant": 11-PRACTICAL-PROJECTS/advanced/03-mcp-powered-assistant.md
+          - "Human-in-the-loop agent": 11-PRACTICAL-PROJECTS/advanced/04-human-in-the-loop-agent.md
+          - "Enterprise knowledge assistant": 11-PRACTICAL-PROJECTS/advanced/05-enterprise-knowledge-assistant.md
+          - "AI workflow automation platform": 11-PRACTICAL-PROJECTS/advanced/06-ai-workflow-automation-platform.md
+      - "Enterprise Projects":
+          - "Multi-tenant AI support platform": 11-PRACTICAL-PROJECTS/enterprise/01-multi-tenant-ai-support-platform.md
+          - "Secure enterprise RAG": 11-PRACTICAL-PROJECTS/enterprise/02-secure-enterprise-rag.md
+          - "Production multi-agent workflow": 11-PRACTICAL-PROJECTS/enterprise/03-production-multi-agent-workflow.md
+          - "Cloud-deployed AI assistant": 11-PRACTICAL-PROJECTS/enterprise/04-cloud-deployed-ai-assistant.md
+  - "Career":
+      - 12-CAREER-AND-INTERVIEWS/README.md
+      - "Module 12.1: AI Engineer Roadmap":
+          - 12-CAREER-AND-INTERVIEWS/01-ai-engineer-roadmap/README.md
+          - "Skills required for AI engineering": 12-CAREER-AND-INTERVIEWS/01-ai-engineer-roadmap/01-skills-required-for-ai-engineering.md
+          - "Python requirements": 12-CAREER-AND-INTERVIEWS/01-ai-engineer-roadmap/02-python-requirements.md
+          - "LLM knowledge": 12-CAREER-AND-INTERVIEWS/01-ai-engineer-roadmap/03-llm-knowledge.md
+          - "Agent frameworks": 12-CAREER-AND-INTERVIEWS/01-ai-engineer-roadmap/04-agent-frameworks.md
+          - "RAG development": 12-CAREER-AND-INTERVIEWS/01-ai-engineer-roadmap/05-rag-development.md
+          - "Backend engineering": 12-CAREER-AND-INTERVIEWS/01-ai-engineer-roadmap/06-backend-engineering.md
+          - "Cloud fundamentals": 12-CAREER-AND-INTERVIEWS/01-ai-engineer-roadmap/07-cloud-fundamentals.md
+          - "Production engineering": 12-CAREER-AND-INTERVIEWS/01-ai-engineer-roadmap/08-production-engineering.md
+          - "Portfolio building": 12-CAREER-AND-INTERVIEWS/01-ai-engineer-roadmap/09-portfolio-building.md
+      - "Module 12.2: Technical Interview Preparation":
+          - 12-CAREER-AND-INTERVIEWS/02-technical-interview-preparation/README.md
+          - "Python interview questions": 12-CAREER-AND-INTERVIEWS/02-technical-interview-preparation/01-python-interview-questions.md
+          - "OOP questions": 12-CAREER-AND-INTERVIEWS/02-technical-interview-preparation/02-oop-questions.md
+          - "Async Python": 12-CAREER-AND-INTERVIEWS/02-technical-interview-preparation/03-async-python.md
+          - "LLM fundamentals": 12-CAREER-AND-INTERVIEWS/02-technical-interview-preparation/04-llm-fundamentals.md
+          - "Prompt engineering": 12-CAREER-AND-INTERVIEWS/02-technical-interview-preparation/05-prompt-engineering.md
+          - "LangChain": 12-CAREER-AND-INTERVIEWS/02-technical-interview-preparation/06-langchain.md
+          - "LangGraph": 12-CAREER-AND-INTERVIEWS/02-technical-interview-preparation/07-langgraph.md
+          - "RAG": 12-CAREER-AND-INTERVIEWS/02-technical-interview-preparation/08-rag.md
+          - "Vector databases": 12-CAREER-AND-INTERVIEWS/02-technical-interview-preparation/09-vector-databases.md
+          - "MCP": 12-CAREER-AND-INTERVIEWS/02-technical-interview-preparation/10-mcp.md
+          - "Agent architectures": 12-CAREER-AND-INTERVIEWS/02-technical-interview-preparation/11-agent-architectures.md
+          - "Evaluation": 12-CAREER-AND-INTERVIEWS/02-technical-interview-preparation/12-evaluation.md
+          - "System design": 12-CAREER-AND-INTERVIEWS/02-technical-interview-preparation/13-system-design.md
+          - "Enterprise architecture": 12-CAREER-AND-INTERVIEWS/02-technical-interview-preparation/14-enterprise-architecture.md
+      - "Module 12.3: System Design":
+          - 12-CAREER-AND-INTERVIEWS/03-system-design/README.md
+          - "Design an AI chatbot": 12-CAREER-AND-INTERVIEWS/03-system-design/01-design-an-ai-chatbot.md
+          - "Design a document RAG system": 12-CAREER-AND-INTERVIEWS/03-system-design/02-design-a-document-rag-system.md
+          - "Design a multi-agent system": 12-CAREER-AND-INTERVIEWS/03-system-design/03-design-a-multi-agent-system.md
+          - "Design a customer support assistant": 12-CAREER-AND-INTERVIEWS/03-system-design/04-design-a-customer-support-assistant.md
+          - "Design a scalable inference service": 12-CAREER-AND-INTERVIEWS/03-system-design/05-design-a-scalable-inference-service.md
+          - "Design an enterprise AI platform": 12-CAREER-AND-INTERVIEWS/03-system-design/06-design-an-enterprise-ai-platform.md
+          - "Design an AI workflow automation system": 12-CAREER-AND-INTERVIEWS/03-system-design/07-design-an-ai-workflow-automation-system.md
+      - "Module 12.4: Freelancing":
+          - 12-CAREER-AND-INTERVIEWS/04-freelancing/README.md
+          - "Finding AI development clients": 12-CAREER-AND-INTERVIEWS/04-freelancing/01-finding-ai-development-clients.md
+          - "Understanding business requirements": 12-CAREER-AND-INTERVIEWS/04-freelancing/02-understanding-business-requirements.md
+          - "Identifying automation opportunities": 12-CAREER-AND-INTERVIEWS/04-freelancing/03-identifying-automation-opportunities.md
+          - "Preparing proposals": 12-CAREER-AND-INTERVIEWS/04-freelancing/04-preparing-proposals.md
+          - "Project estimation": 12-CAREER-AND-INTERVIEWS/04-freelancing/05-project-estimation.md
+          - "Pricing AI development services": 12-CAREER-AND-INTERVIEWS/04-freelancing/06-pricing-ai-development-services.md
+          - "Delivering client projects": 12-CAREER-AND-INTERVIEWS/04-freelancing/07-delivering-client-projects.md
+          - "Building a portfolio": 12-CAREER-AND-INTERVIEWS/04-freelancing/08-building-a-portfolio.md
+          - "Maintaining applications": 12-CAREER-AND-INTERVIEWS/04-freelancing/09-maintaining-applications.md
+          - "Providing technical support": 12-CAREER-AND-INTERVIEWS/04-freelancing/10-providing-technical-support.md
+  - Resources:
+      - All Projects: projects.md
+      - References: references.md
+      - Content Guidelines: content-guidelines.md
+      - Original Roadmap: original-roadmap.md
+      - Prompts:
+          - Blog Generation Master Prompt: prompts/BLOG_GENERATION_MASTER_PROMPT.md
+          - Project Generation Prompt: prompts/PROJECT_GENERATION_PROMPT.md
+          - Code Review Prompt: prompts/CODE_REVIEW_PROMPT.md

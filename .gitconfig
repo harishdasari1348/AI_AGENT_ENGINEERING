@@ -1,0 +1,6 @@
+[user]
+    name = Harish Dasari
+    email = harish.dasari5@gmail.com
+[credential]
+    namespace = gallilo
+    useHttpPath = true
