@@ -1,0 +1,6 @@
+# The notebook uses only the Python standard library.
+# These pins run the notebook and the test.
+ipykernel==7.4.0
+nbclient==0.11.0
+nbformat==5.11.1
+pytest==9.2.0

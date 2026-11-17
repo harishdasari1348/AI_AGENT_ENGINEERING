@@ -10,16 +10,16 @@
 
 | # | Topic | Status |
 |---|---|---|
-| 01 | [What is Artificial Intelligence?](01-what-is-artificial-intelligence.md) | 📝 Placeholder |
-| 02 | [History of Artificial Intelligence](02-history-of-artificial-intelligence.md) | 📝 Placeholder |
-| 03 | [Types of AI](03-types-of-ai.md) | 📝 Placeholder |
-| 04 | [Narrow AI vs General AI](04-narrow-ai-vs-general-ai.md) | 📝 Placeholder |
-| 05 | [Machine Learning vs Deep Learning](05-machine-learning-vs-deep-learning.md) | 📝 Placeholder |
-| 06 | [Supervised Learning](06-supervised-learning.md) | 📝 Placeholder |
-| 07 | [Unsupervised Learning](07-unsupervised-learning.md) | 📝 Placeholder |
-| 08 | [Reinforcement Learning](08-reinforcement-learning.md) | 📝 Placeholder |
-| 09 | [Generative AI](09-generative-ai.md) | 📝 Placeholder |
-| 10 | [Applications of AI in real-world industries](10-applications-of-ai-in-real-world-industries.md) | 📝 Placeholder |
+| 01 | [What is Artificial Intelligence?](01-what-is-artificial-intelligence.md) | ✅ Published |
+| 02 | [History of Artificial Intelligence](02-history-of-artificial-intelligence.md) | ✍️ Draft |
+| 03 | [Types of AI](03-types-of-ai.md) | ✅ Published |
+| 04 | [Narrow AI vs General AI](04-narrow-ai-vs-general-ai.md) | ✅ Published |
+| 05 | [Machine Learning vs Deep Learning](05-machine-learning-vs-deep-learning.md) | ✅ Published |
+| 06 | [Supervised Learning](06-supervised-learning.md) | ✅ Published |
+| 07 | [Unsupervised Learning](07-unsupervised-learning.md) | ✅ Published |
+| 08 | [Reinforcement Learning](08-reinforcement-learning.md) | ✅ Published |
+| 09 | [Generative AI](09-generative-ai.md) | ✅ Published |
+| 10 | [Applications of AI in real-world industries](10-applications-of-ai-in-real-world-industries.md) | ✅ Published |
 
 ---
 

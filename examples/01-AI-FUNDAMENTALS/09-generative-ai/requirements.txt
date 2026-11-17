@@ -1,0 +1,9 @@
+# Pinned versions used to run the companion notebook and tests (2026-11-17, Python 3.14.5).
+numpy==2.5.5
+pytest==9.2.0
+nbformat==5.11.1
+nbclient==0.11.0
+ipykernel==7.4.0
+# Classic Jupyter Notebook UI for `jupyter notebook generative_ai.ipynb`.
+# Not pinned: browser front end only, not required for automated tests.
+notebook>=7
