@@ -6,6 +6,14 @@ site_author: AI Agent Engineering Academy
 
 docs_dir: docs
 
+# Links to ../../../examples/... point outside docs/ (the examples directory is
+# intentionally a sibling of docs, not inside it).  Setting not_found to "warn"
+# preserves all other strict-mode checks while allowing cross-tree references to
+# companion notebooks and example folders.
+validation:
+  links:
+    not_found: warn
+
 theme:
   name: material
   language: en
